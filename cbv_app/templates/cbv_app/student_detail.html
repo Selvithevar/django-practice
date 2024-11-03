@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>detail</title>
-</head>
-<body>
+{%extends 'cbv_app/base.html'%}
+{%block body_block%}
     <h1>Student detail</h1>
     <ol>
         <h3><li>First name: {{students.first_name}}</li></h3>
@@ -15,5 +9,4 @@
         <h3><li><a href="{% url 'delete' students.id %}">Delete</a></li></h3>
 
     </ol>
-</body>
-</html>
+    {%endblock%}
