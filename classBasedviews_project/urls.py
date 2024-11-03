@@ -25,5 +25,13 @@ urlpatterns = [
     path("create/",views.studentCreateview.as_view()),
     path("update/<int:pk>",views.studentUpdateview.as_view()),
     path("delete/<int:pk>",views.studentDeleteview.as_view(),name="delete"),
+    # session managemnet
+    path("home/",views.home,name="home"),
+    path("page2/",views.page2,name="page2"),
+    path("count/",views.countView,name="count"),
+    path("index/",views.index,name="index"),
+    path("displayItems/",views.displayCart,name="displayItems"),
+    path("addItem/",views.addItem,name="addItem"),
+    path("pagecount/",views.pagecount,name="pagecount")
 
 ]
