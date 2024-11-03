@@ -1,0 +1,9 @@
+{%extends 'cbv_app/base.html'%}
+{%block body_block%}
+    <form method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" value="Add">
+        <a href="/displayItems">Display items</a>
+    </form>
+{%endblock%}
