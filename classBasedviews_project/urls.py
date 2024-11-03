@@ -20,5 +20,10 @@ from cbv_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.Greetingview.as_view())
+    path("",views.Greetingview.as_view(),name='students'),
+    path("<int:pk>",views.studentDetailview.as_view(),name="detail"),
+    path("create/",views.studentCreateview.as_view()),
+    path("update/<int:pk>",views.studentUpdateview.as_view()),
+    path("delete/<int:pk>",views.studentDeleteview.as_view(),name="delete"),
+
 ]

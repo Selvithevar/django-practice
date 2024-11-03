@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Students:</h1>
+    <table border="2">
+        <thead>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Test score</th>
+        </thead>
+        {% for student in students_list %}
+        <tr>
+            <td><a href="/{{student.id}}">{{student.id}}</a></td>
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.testScore}}</td>
+            <!-- <td></td> -->
+        </tr>&nbsp;&nbsp;
+        {% endfor %}
+        <td><a href="/create">Add student</a></td>
+
+    </table>
+</body>
+</html>
